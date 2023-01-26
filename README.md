@@ -2,8 +2,12 @@
 
 ## O projeto
 
+
+O projeto tem por objetivo o gerenciamento de indústrias. Os usuários com acesso a API poderão cadastrar, editar, listar e atualizar informações das indústrias do CNI.
+
 Projeto desenvolvido para um CRUD utilizando java e com armazenamentos de dados no MySQL.
 Projeto funcional. Testado todos os métodos CRUD.
+
 
 
 <ul>
@@ -20,5 +24,4 @@ Projeto funcional. Testado todos os métodos CRUD.
 
 ## O que não foi feito.
 
-Como não era o foco, não foi implementado uma interface gráfica.
-
+Como não era o foco, não foi implementada uma interface gráfica.
