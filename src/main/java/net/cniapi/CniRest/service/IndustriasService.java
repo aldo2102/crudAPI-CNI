@@ -35,7 +35,9 @@ public class IndustriasService {
     
     public void atualizar(Industrias industria) {
     	Optional<Industrias> industriaEditada = repo.findById(industria.getId());
-        if(industriaEditada==null) {
+
+    	System.out.println(industria.getId());
+        if(industriaEditada!=null) {
 	    	industriaEditada.get().setData_criacao(industria.getData_criacao());
 	    	industriaEditada.get().setEndereco(industria.getEndereco());
 	    	industriaEditada.get().setLimite_producao_diaria(industria.getLimite_producao_diaria());
