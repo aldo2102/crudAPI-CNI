@@ -35,7 +35,7 @@ public class IndustriasControllers {
 	 
 	 @PutMapping("/editarindustria")
 	 public String editarEmpresa(@RequestBody Industrias industria) {
-		 service.save(industria);
+		 service.atualizar(industria);
 		 return "{mensagem:'editar com sucesso'}";
 	 }
 	     
