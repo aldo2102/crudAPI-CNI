@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CniRestApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(CniRestApplication.class, args);
 	}
 

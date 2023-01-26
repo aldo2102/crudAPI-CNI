@@ -30,20 +30,20 @@ public class IndustriasControllers {
 	 @PostMapping("/novaindustria")
 	 public String novaIndustria(@RequestBody Industrias industria) {
 		 service.save(industria);
-		 return "{mensagem:'salvo com sucesso'";
+		 return "{mensagem:'salvo com sucesso'}";
 	 }
 	 
 	 @PutMapping("/editarindustria")
 	 public String editarEmpresa(@RequestBody Industrias industria) {
 		 service.save(industria);
-		 return "{mensagem:'editar com sucesso'";
+		 return "{mensagem:'editar com sucesso'}";
 	 }
 	     
 	  
 	  @DeleteMapping("/deletarindustria/{id}")
 	  public String deletarIndustria(@PathVariable Integer id) {
 			 service.delete(id);
-			 return "{mensagem:'apagado com sucesso'";
+			 return "{mensagem:'apagado com sucesso'}";
 		 }
 	 
 	 

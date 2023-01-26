@@ -1,10 +1,12 @@
 package net.cniapi.CniRest.models;
 
 import jakarta.persistence.Id;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+
+import java.sql.Date;
+import java.util.List;
+
+
+import jakarta.persistence.*;
 
 @Entity
 public class Industrias {
@@ -16,17 +18,29 @@ public class Industrias {
     private String endereco;
 	@Column(name = "tipo_atividade") 
     private String tipo_atividade;
-    
+	@Column(name = "data_criacao") 
+    private Date data_criacao;
+	@Column(name = "limite_producao_diaria") 
+    private Integer limite_producao_diaria;
+	
+	
     public Industrias() {}
     
-    public Industrias(Integer id, String nome, String endereco,String tipoAtividade) {
-        this.id = id;
-        this.nome = nome;
-        this.endereco = endereco;
-        this.tipo_atividade = tipoAtividade;
-    }
- 
-    @Id
+
+
+	public Industrias(Integer id, String nome, String endereco, String tipo_atividade, Date data_criacao,
+			Integer limite_producao_diaria) {
+		this.id = id;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.tipo_atividade = tipo_atividade;
+		this.data_criacao = data_criacao;
+		this.limite_producao_diaria = limite_producao_diaria;
+	}
+
+
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getId() {
         return id;
@@ -59,7 +73,36 @@ public class Industrias {
 	public void setTipo_atividade(String tipo_atividade) {
 		this.tipo_atividade = tipo_atividade;
 	}
-    
-    
+
+
+
+
+	public Date getData_criacao() {
+		return data_criacao;
+	}
+
+
+
+
+	public void setData_criacao(Date data_criacao) {
+		this.data_criacao = data_criacao;
+	}
+
+
+
+
+	public Integer getLimite_producao_diaria() {
+		return limite_producao_diaria;
+	}
+
+
+
+
+	public void setLimite_producao_diaria(Integer limite_producao_diaria) {
+		this.limite_producao_diaria = limite_producao_diaria;
+	}
+
+	
+
 
 }
